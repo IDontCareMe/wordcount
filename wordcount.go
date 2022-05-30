@@ -3,7 +3,7 @@ package main
 import (
   "fmt"
   "os"
-  "bufio"
+  //"bufio"
   "strings"
 )
 
@@ -14,7 +14,7 @@ func main() {
   }
   strSlice := splitStr(s)
   
-  fmt.Println(len(strSlice))  
+  fmt.Println(len(strSlice))
 }
 
 func splitStr(s string) []string {
@@ -28,11 +28,7 @@ func splitStr(s string) []string {
 func readImput()(string, error){
   //reader := bufio.NewReader(os.Stdin)
   //str,err := reader.ReadString('\n')
-  scan := bufio.NewScanner(os.Stdin)
-  var str string
-  if scan.Scan() {
-    str = scan.Text()
-  }
+  str := os.Args[1]
   return str, nil
 }
 
