@@ -14,7 +14,7 @@ func main() {
   }
   strSlice := splitStr(s)
   
-  fmt.Println(len(strSlice))  
+  fmt.Print(len(strSlice))  
 }
 
 func splitStr(s string) []string {
