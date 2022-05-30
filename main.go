@@ -14,7 +14,7 @@ func main() {
   }
   strSlice := splitStr(s)
   
-  fmt.Print(len(strSlice))  
+  fmt.Println(len(strSlice))  
 }
 
 func splitStr(s string) []string {
@@ -26,9 +26,14 @@ func splitStr(s string) []string {
 }
 
 func readImput()(string, error){
-  reader := bufio.NewReader(os.Stdin)
-  str,err := reader.ReadString('\n')
-  return str, err
+  //reader := bufio.NewReader(os.Stdin)
+  //str,err := reader.ReadString('\n')
+  scan := bufio.NewScanner(os.Stdin)
+  var str string
+  if scan.Scan() {
+    str = scan.Text()
+  }
+  return str, nil
 }
 
 func printErrors(err error) {
