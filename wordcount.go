@@ -7,7 +7,7 @@ import (
   "strings"
 )
 
-func main(){
+func main() {
   s,err := readImput()
   if err != nil {
     printErrors(err)
